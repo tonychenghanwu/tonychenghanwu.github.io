@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chenghan Wu — Business student and aspiring accounting intern.">
+  <title>Chenghan Wu | Business & Finance</title>
+  <style>
+    :root { --ink:#18242a; --muted:#627278; --paper:#f8f8f5; --white:#fff; --accent:#0d766d; --line:#dce4e1; --warm:#d89a57; }
+    * { box-sizing:border-box; } html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height:1.6; }
+    a { color:inherit; text-decoration:none; } a:hover { color:var(--accent); }
+    .wrap { max-width:1080px; margin:0 auto; padding:0 28px; }
+    header { min-height:100vh; display:flex; flex-direction:column; padding:28px 0 50px; background:linear-gradient(135deg,#eff5f1 0%,#f8f8f5 63%,#f5eadc 100%); }
+    nav { display:flex; justify-content:space-between; align-items:center; font-size:.85rem; letter-spacing:.08em; text-transform:uppercase; }
+    .brand { font-weight:800; color:var(--accent); }
+    .nav-links { display:flex; gap:22px; color:var(--muted); }
+    .hero { flex:1; display:grid; grid-template-columns:1.3fr .7fr; align-items:center; gap:55px; padding:70px 0; }
+    .eyebrow { display:flex; align-items:center; gap:12px; color:var(--accent); font-size:.78rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+    .eyebrow::before { content:""; width:32px; height:2px; background:var(--warm); }
+    h1 { margin:15px 0 20px; max-width:760px; font-family:Georgia, "Times New Roman", serif; font-size:clamp(3.5rem,8vw,6.4rem); font-weight:400; letter-spacing:-.065em; line-height:.93; }
+    h1 em { color:var(--accent); font-style:italic; }
+    .intro { max-width:560px; color:var(--muted); font-size:1.12rem; }
+    .button-row { display:flex; flex-wrap:wrap; gap:14px; margin-top:30px; }
+    .button { display:inline-flex; align-items:center; gap:9px; padding:12px 18px; border:1px solid var(--accent); font-size:.86rem; font-weight:700; }
+    .button.primary { background:var(--accent); color:white; }.button.primary:hover { background:#095c55; color:white; }.button:not(.primary):hover { background:white; }
+    .hero-card { padding:9px 0 9px 26px; border-left:1px solid var(--accent); }
+    .hero-card h2 { margin:0 0 15px; font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+    .stat { padding:11px 0; border-top:1px solid var(--line); }.stat:first-of-type { border-top:0; padding-top:0; }.stat strong { display:inline-block; min-width:92px; color:var(--accent); font-family:Georgia,serif; font-size:1.65rem; font-weight:400; }.stat span { font-size:.86rem; color:var(--muted); }
+    main { padding:85px 0; }.section { display:grid; grid-template-columns:190px 1fr; gap:50px; padding:56px 0; border-top:1px solid var(--line); }.section-label { color:var(--accent); font-size:.78rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
+    .section h2 { margin:0 0 18px; font-family:Georgia,serif; font-size:2.25rem; font-weight:400; letter-spacing:-.035em; line-height:1.1; }.lead { margin:0; max-width:720px; color:var(--muted); font-size:1.06rem; }
+    .timeline { margin-top:38px; }.item { position:relative; padding:0 0 38px 27px; border-left:1px solid var(--line); }.item:last-child { padding-bottom:0; }.item::before { content:""; position:absolute; top:7px; left:-5px; width:9px; height:9px; border-radius:50%; background:var(--warm); }.item-head { display:flex; justify-content:space-between; align-items:baseline; gap:20px; }.item h3 { margin:0; font-size:1.06rem; }.org { margin:2px 0 12px; color:var(--accent); font-size:.92rem; font-weight:700; }.date { flex:none; color:var(--muted); font-size:.8rem; white-space:nowrap; }.item ul { margin:0; padding-left:17px; color:#46555a; }.item li+li { margin-top:7px; }
+    .cards { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:44px; margin-top:34px; }.card { padding:0 0 0 20px; border-left:2px solid var(--warm); }.card h3 { margin:0 0 8px; font-size:1rem; }.card p { margin:0; color:var(--muted); font-size:.92rem; }.academic-highlights { margin-top:38px; padding:22px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }.academic-highlights h3 { margin:0 0 16px; color:var(--accent); font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; }.grades { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }.grade { font-size:.85rem; color:var(--muted); }.grade strong { display:block; margin-bottom:2px; color:var(--ink); font-family:Georgia,serif; font-size:1.25rem; font-weight:400; }.tag-row { display:flex; flex-wrap:wrap; gap:0; margin-top:26px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }.tag { padding:12px 15px 12px 0; margin-right:15px; color:#25665f; font-size:.84rem; font-weight:700; }
+    footer { padding:45px 0; background:var(--ink); color:white; }.foot { display:flex; justify-content:space-between; align-items:end; gap:20px; }.foot h2 { margin:0; font-family:Georgia,serif; font-weight:400; font-size:2rem; }.foot p { margin:7px 0 0; color:#b8c6c4; }.contact { display:flex; gap:18px; font-size:.86rem; color:#e1ebe9; }
+    @media (max-width:720px) { .wrap { padding:0 20px; } header { min-height:auto; }.nav-links { display:none; }.hero { grid-template-columns:1fr; gap:35px; padding:80px 0 45px; }.section { grid-template-columns:1fr; gap:15px; padding:40px 0; }.item-head { display:block; }.date { display:block; margin-top:4px; }.cards { grid-template-columns:1fr; gap:28px; }.grades { grid-template-columns:repeat(2,1fr); gap:18px; }.foot { display:block; }.contact { margin-top:24px; flex-wrap:wrap; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav><a class="brand" href="#top">CW / 2026</a><div class="nav-links"><a href="#experience">Experience</a><a href="#education">Education</a><a href="#skills">Skills</a></div></nav>
+      <div class="hero" id="top">
+        <div><div class="eyebrow">Business student · Rouen, France</div><h1>Chenghan <em>Wu.</em></h1><p class="intro">Global BBA student with hands-on experience in financial management, e-commerce operations and data-driven decision-making. Seeking a 3-month accounting internship from May to August 2026.</p><div class="button-row"><a class="button primary" href="mailto:wuchenghan418@gmail.com">Get in touch ↗</a><a class="button" href="https://www.linkedin.com/in/tony-chenghan-wu/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></div>
+        <aside class="hero-card"><h2>At a glance</h2><div class="stat"><strong>¥50k+</strong><span>Revenue managed in e-commerce</span></div><div class="stat"><strong>40%</strong><span>Net profit margin achieved</span></div><div class="stat"><strong>1st / 24</strong><span>Business simulation competition</span></div></aside>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="section" id="experience"><div class="section-label">01 / Experience</div><div><h2>Commercial instinct,<br>financial discipline.</h2><p class="lead">I enjoy turning messy business questions into clear numbers and practical actions — from managing a P&amp;L to improving procurement decisions.</p><div class="timeline">
+      <article class="item"><div class="item-head"><h3>Founder</h3><time class="date">Mar 2024 — Present</time></div><p class="org">Football Merchandise Venture · Zhejiang, China</p><ul><li>Founded a profitable e-commerce venture, generating ¥50,000+ in revenue and ¥20,000+ in profit through full P&amp;L management, budgeting and strategic pricing.</li><li>Built a demand-forecasting model that kept inventory to about 30 units per cycle, improving turnover while avoiding overstock.</li><li>Reduced procurement and logistics costs by more than 20% through tariff optimisation and supplier negotiation.</li></ul></article>
+      <article class="item"><div class="item-head"><h3>Business Assistant &amp; Tutor (Part-time)</h3><time class="date">Jun 2024 — Aug 2025</time></div><p class="org">Hancheng Education Company · Zhejiang, China</p><ul><li>Managed bookkeeping and Excel dashboards for ¥50,000+ in revenue, supporting management decisions with financial and market analysis.</li><li>Helped execute a digital strategy that grew the social-media audience to 5,000+ followers.</li><li>Delivered student-progress presentations and personalised Math and English tutoring, sustaining 98% client satisfaction.</li></ul></article>
+      <article class="item"><div class="item-head"><h3>Student Volunteer</h3><time class="date">Feb — Mar 2023</time></div><p class="org">Haining People's Hospital · Zhejiang, China</p><ul><li>Assisted more than 20 patients daily with digital registration and hospital navigation during peak hours.</li></ul></article>
+    </div></div></section>
+    <section class="section" id="education"><div class="section-label">02 / Education</div><div><h2>Building a global<br>business foundation.</h2><div class="cards"><article class="card"><h3>NEOMA Business School</h3><p><strong>Global Bachelor in Business Administration</strong><br>Rouen, France · 2025–2029<br><br>Year 1 overall average: <strong>17.34/20</strong> · GPA 3.854</p></article><article class="card"><h3>Sustainability in Action</h3><p><strong>1st Place — Business Project</strong><br>Rouen, France · Sep 2025<br><br>Led an ESG-driven business model to first place among 24 teams; built a Wix website and go-to-market strategy in a 48-hour workshop.</p></article></div><div class="academic-highlights"><h3>Selected academic highlights · Year 1</h3><div class="grades"><div class="grade"><strong>A+</strong>Sustainable Finance &amp;<br>Global Markets</div><div class="grade"><strong>A+</strong>Financial Analysis</div><div class="grade"><strong>A+</strong>Business Statistics for<br>Decision Making</div><div class="grade"><strong>A</strong>Financial Accounting</div></div></div></div></section>
+    <section class="section" id="skills"><div class="section-label">03 / Skills</div><div><h2>Tools, languages<br>&amp; perspective.</h2><div class="tag-row"><span class="tag">Microsoft Office / Excel</span><span class="tag">Financial Analysis</span><span class="tag">Bookkeeping</span><span class="tag">Web Design</span><span class="tag">Adobe Premiere Pro</span><span class="tag">Python · Beginner</span></div><div class="cards"><article class="card"><h3>Languages</h3><p>Chinese — Native<br>English — Proficient (IELTS 7.0)<br>French — Intermediate (TCF B1)</p></article><article class="card"><h3>Outside work</h3><p>Baking &amp; cooking · Content creation · Photography · Public speaking · Football (school-team captain)</p></article></div></div></section>
+  </main>
+  <footer><div class="wrap foot"><div><h2>Let’s work together.</h2><p>Available for accounting internship opportunities, May–August 2026.</p></div><div class="contact"><a href="mailto:wuchenghan418@gmail.com">Email ↗</a><a href="https://www.linkedin.com/in/tony-chenghan-wu/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></div></footer>
+</body>
+</html>
